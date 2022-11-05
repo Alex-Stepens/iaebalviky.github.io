@@ -1,0 +1,302 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+<title>help_urself</title>
+
+  
+
+</body>
+</html>
+<style>
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  }
+.topnav a {
+  float: left;
+  display: black;
+  color: blackk;
+  text-align: black; 
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: dark;
+  color: black;
+}
+/* Оформление боковой панели */
+#side-checkbox {
+    display: none;
+}
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: -360px;
+    background: black;
+    transition: all 0.5s;  
+    width: 320px;
+    height: 100vh;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    color: black;
+    padding: 40px 20px;
+}
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+/* Оформление кнопки на странице */
+.side-button-1-wr {
+    text-align: center; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
+}
+.side-button-1 .side-b {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: black;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+}
+.side-button-1 .side-b:hover,
+.side-button-1 .side-b:active,
+.side-button-1 .side-b:focus {
+    color: #FFF;
+}
+.side-button-1 .side-b:after,
+.side-button-1 .side-b:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.side-button-1 .side-open:after,
+.side-button-1 .side-open:before {
+    background: red;
+}
+.side-button-1 .side-close:after,
+.side-button-1 .side-close:before {
+    background: red;
+}
+.side-button-1 .side-b:before {
+    top: -6px;
+}
+.side-button-1 .side-b:hover:after,
+.side-button-1 .side-b:hover:before {
+    width: 100%;
+    left: 0;
+}
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+    display: block;
+}
+#side-checkbox:checked + .side-panel {
+    left: 0;
+}
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: black;   
+    transition: all 280ms ease-in-out;   
+}
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);   
+    color: black;
+}
+</style>
+</head>
+<body>
+
+
+
+<style>
+
+   body {
+        background: url(https://cdn.discordapp.com/attachments/1008454806135910410/1038180278625120266/IMG_20221104_215112_700.jpg) no-repeat center center fixed; 
+        background-size: cover;
+
+    color: white; /* Цвет текста */
+   }
+  </style>
+
+  <head> 
+
+    <meta charset="UTF-8" /> 
+
+    
+
+    <title>Главная</title> 
+
+    <style> 
+
+      body { 
+
+        padding: 25px; 
+
+        background-color: white; 
+
+        color: white; 
+
+        font-size: 25px; 
+
+      }
+      .round {
+    border-radius: 100px; /* Радиус скругления */
+    box-shadow: 0 0 0 3px black, 0 0 13px #333; /* Параметры теней */
+   }
+       .clean-label {
+       border:           none;
+       background-color: white;
+       color:            red;
+       margin-left:      9px;
+       text-decoration:  none;
+       outline:          none;
+       cursor:           pointer;
+       width:300px; 
+       height:50px;
+       }
+    
+    
+    
+    
+    
+    
+    
+    
+
+    .clean-label:hover {
+    color:            red;
+}    
+       img {
+  border-radius: 50%;
+}
+      .dark-mode {
+    background: #c7b39b url(blob:https://web.telegram.org/a17fa561-03d2-4e1c-908b-a1fc23766382); /* Цвет фона и путь к файлу */
+    color: red; /* Цвет текста */
+   
+  
+  } 
+
+    </style> 
+
+  </head> 
+
+  <body> 
+
+    
+
+    
+    
+
+  
+
+
+
+<input type="checkbox" id="side-checkbox" />
+<div class="side-panel">
+    <label class="side-button-2" for="side-checkbox">+</label>   
+    <div class="side-title" style="color:red;"> Выдвижная панель:</div>
+    <p> <a href="index.html" style="color:red;"> Главная страница </a></p>
+
+    <p>  <a href="https://github.com/ymenyasvikuseyintsest/ymenyasvikuseyintsest.github.io/blob/main/index.html" style="color:red;"> Код сайта</a></p>
+</div>
+<div class="side-button-1-wr">
+    <label class="side-button-1" for="side-checkbox">
+        <div class="side-b side-open">Открыть</div>
+        <div class="side-b side-close">Закрыть</div>
+    </label>
+</div>  
+
+    
+
+    <div> 
+ <center> <h><b>Discord:</b></h><h>help_urself#0457</h></center>
+	    <p>
+		     <center> <h><b>Telegram:</b></h>@zxc_gost_deutch_10007_shadowraze / +48 732 543 243</h1></center>
+	    </p>
+	    	    <p>
+		     <center> <b><h>Instagram:</b>@help_urself0841</h1></center>
+		     <p>
+		     		     <center> <b><h>TikTok:</b>@help_urself0457</h1></center></p>
+	    </p>
+      
+
+      
+
+    </div> 
+
+    <script> 
+
+      function darkMode() { 
+
+        var element = document.body; 
+
+        element.classList.toggle("dark-mode"); 
+
+      } 
+
+    </script> 
+
+  </body>
+ 
+
+  
+  </form>
+  <style type="text/css">
+   #content {
+    width: 500px; /* Ширина слоя */
+    margin: 0 auto 50px; /* Выравнивание по центру */
+   }
+   #footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    
+   }
+  </style>
+ </head>
+ <body>
+
+
+ </html>
